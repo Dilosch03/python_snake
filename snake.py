@@ -31,6 +31,7 @@ def inside(head):
     return -200 < head.x < 190 and -200 < head.y < 190
 
 def moveFood(foodLoc:vector):
+    """Function to move the food randomly"""
     for i in choices(range(0,4),k=4):
         if (inside(foodLoc+posible_movements[i])):
             foodLoc.move(posible_movements[i])
